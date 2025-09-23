@@ -14,7 +14,7 @@ body {
 }
 .userloggin {
     background-color: aliceblue;
-    width: 600px;
+    width: 800px;
     height: 40px;
     border-radius:10px;
     margin-top: 10%;
@@ -74,7 +74,14 @@ border-radius: 10px;
 margin-left: 20px;
 }
 
-.button {
+
+.button{
+    margin-top: 20PX;
+    display: inline-flex;
+}
+
+
+.button button {
 border-radius: 15px;
 width: 120px;
 height: 35px;
@@ -91,9 +98,11 @@ height: 35px;
 }
 
 .button img {
-margin-top: 20px;
-align-items: center;
-float: left;
-color: bisque;
-    
+    float: left;}
+    a{
+    margin-left: 60px;
+    color: bisque;
+    float: left;
+    margin-top: 20px;
+
 }
