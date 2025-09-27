@@ -1,59 +1,142 @@
-/* General Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
 
-/* Body Styling */
+/* ======= Tipografía ======= */
+
 body {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    background-color: #f4f6f8;
-    color: #222;
-    text-align: center;
-    padding: 20px;
-}
-
-/* Header Styling */
-header {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2d3e50;
-    margin-bottom: 20px;
-}
-
-/* Paragraph Styling */
-p {
-    font-size: 1rem;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #F5F7FA; /* gris muy suave */
+    color: #212121;
     line-height: 1.6;
-    margin-bottom: 20px;
-    color: #555;
 }
 
-/* Table Styling */
+/* ======= Paleta Material Design (mate y suaves) ======= */
+/* Azul principal, Verde secundario, Amarillo acento */
+:root {
+    --primary-color: #4A90E2;   /* Azul suave */
+    --secondary-color: #4CAF50; /* Verde Material */
+    --accent-color: #FFC107;    /* Amarillo */
+    --text-color: #212121;
+    --surface-color: #FFFFFF;
+    --divider-color: #E0E0E0;
+}
+
+/* ======= Encabezado ======= */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--surface-color);
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 0 0 16px 16px;
+}
+
+/* ======= Texto ======= */
+p {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+/* ======= Tabla de enlaces ======= */
 .container-table {
-    width: 80%;
-    margin: 20px auto;
+    margin: 2rem auto;
     border-collapse: collapse;
-    border: 1px solid #ddd;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 900px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 .container-table td {
-    padding: 12px 20px;
-    border: 1px solid #ddd;
-    text-align: left;
-    font-size: 1rem;
-    color: #333;
+    padding: 1rem;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.container-table tr:last-child td {
+    border-bottom: none;
 }
 
 .container-table a {
-    color: #1a73e8;
+    color: var(--primary-color);
+    font-weight: 500;
     text-decoration: none;
-    font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .container-table a:hover {
-    text-decoration: underline;
+    color: var(--secondary-color);
+}
+
+/* ======= Botones / Enlaces destacados ======= */
+button, .btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+/* ======= Iconografía ======= */
+/* Recomendado: usar <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet"> */
+.icon {
+    font-family: 'Material Symbols Outlined';
+    font-size: 1.5rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* ======= Slots para imágenes ======= */
+.image-slot {
+    width: 100%;
+    height: 250px;
+    background-color: #E0E0E0;
+    border-radius: 12px;
+    margin: 1.5rem auto;
+    max-width: 900px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #757575;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+/* ======= Responsive ======= */
+@media (max-width: 600px) {
+    header {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .container-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .container-table tr {
+        margin-bottom: 1rem;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
 }
