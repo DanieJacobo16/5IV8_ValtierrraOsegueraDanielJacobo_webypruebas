@@ -53,16 +53,14 @@ body {
 
 .carta {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* para que se vea interactivo */
+  cursor: pointer;
 }
 
 .carta:hover {
   transform: scale(1.1) translateY(-10px); 
-  /* scale = se hace más grande (10%)
-     translateY = sube un poco hacia arriba */
+  
   
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); 
-  /* sombra para que parezca que "flota" */
 }
 
 .carta-morada {
