@@ -58,9 +58,7 @@ body {
 
 .carta:hover {
   transform: scale(1.1) translateY(-10px); 
-  
-  
-  box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); 
+ 
 }
 
 .carta-morada {
