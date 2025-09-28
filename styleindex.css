@@ -48,9 +48,12 @@ body {
 .cartas {
   position: relative; 
   width: 800px; 
-  height: 600px;
+  height: 600px; 
+}
+
+.carta {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer; /* para que se vea interactivo */  
+  cursor: pointer; /* para que se vea interactivo */
 }
 
 .carta:hover {
@@ -61,6 +64,7 @@ body {
   box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4); 
   /* sombra para que parezca que "flota" */
 }
+
 .carta-morada {
   position: absolute;
   top: 44px;   
