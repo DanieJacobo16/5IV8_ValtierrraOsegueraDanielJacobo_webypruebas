@@ -63,7 +63,7 @@ body {
 
 .carta-morada {
   position: absolute;
-  top: 44px;   
+  top: 22px;   
   left: 700px;  
   width: 135px; 
   height: auto;
@@ -71,7 +71,7 @@ body {
 }
 .carta-naranja {
   position: absolute;
-  top: 55px;  
+  top: 37px;  
   left: 840px;  
   width: 135px; 
   height: auto;
@@ -87,7 +87,7 @@ body {
 }
 .carta-lw {
   position: absolute;
-  top: 42px;  
+  top: 34px;  
   left: 564px;  
   width: 130px; 
   height: auto;
