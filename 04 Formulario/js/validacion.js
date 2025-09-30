@@ -8,72 +8,78 @@ var , let y const
 
 */
 function validar (formulario) {
-    //Validar q el campo no me acepte mas de 3 caracteres/
-    if (formulario.nombre.value.lenght < 3 ) {
-        alert("Por favor escribe mas de 3 caracteres en el campo nombre");
-        formulario.nombre.focus ();
-        return false ;
-    }
-//Validacion letras 
-var checkStr = formulario.nombre.value;
-var abcOK = "ABCDEFGHIJKLMNÑOPQRSTUVWYZ" + "abcdefghijklmnñopqrstuvwxyz";
-var allvalido = false ;
-
-//Tenemos q comparar cadena de nombre con el resultado de abc 
-for( var i=0; checkStr.lenght; i++){
-    var caracteres=checkStr.charArt(i);
-    for(var j=0; j< abcOK.length; j++){
-        if (caracteres==abcOK.charAt(j))
-            break;
-        }
-if(j==abcOK.length) {
-    allvalido=false;
-    break;
-}
-
-}
-if (allvalido){
-    alert ("Ingresar un nombre valido ")
+//Validar que el campo no acepte menos de 3 caracteres
+if (formulario.nombre.value.length < 3 ) {
+    alert("Por favor escribe más de 3 caracteres en el campo nombre");
     formulario.nombre.focus();
     return false;
-
 }
+// Validación letras
+var checkStr = formulario.nombre.value;
+var abcOK = "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ" + "abcdefghijklmnñopqrstuvwxyz";
+var allvalido = true;
 
-//VAlidacion letras 
-var checkStr = formulario.edad.value;
-var abcOK = "1234567890";
-
-var allvalido = false ;
-
-//Tenemos q comparar cadena de nombre con el resultado de abc 
-for( var i=0; checkStr.lenght; i++){
-    var caracteres=checkStr.charArt(i);
-    for(var j=0; j< abcOK.length; j++){
-        if (caracteres==abcOK.charAt(j))
+// Comparar cadena de nombre con el resultado de abc
+for (var i = 0; i < checkStr.length; i++) {
+    var caracteres = checkStr.charAt(i);
+    var letraValida = false;
+    for (var j = 0; j < abcOK.length; j++) {
+        if (caracteres == abcOK.charAt(j)) {
+            letraValida = true;
             break;
         }
-if(j==abcOK.length) {
-    allvalido=false;
-    break;
+    }
+    if (!letraValida) {
+        allvalido = false;
+        break;
+    }
+}
+if (allvalido == false) {
+    alert("Ingresar un nombre válido");
+    formulario.nombre.focus();
+    return false;
 }
 
+// Validación solo números
+var checkStr = formulario.edad.value;
+var numOK = "1234567890";
+var allvalido = true;
+
+// Comparar cadena de número con el numOK
+for (var i = 0; i < checkStr.length; i++) {
+    var caracteres = checkStr.charAt(i);
+    var numeroValido = false;
+    for (var j = 0; j < numOK.length; j++) {
+        if (caracteres == numOK.charAt(j)) {
+            numeroValido = true;
+            break;
+        }
+    }
+    if (!numeroValido) {
+        allvalido = false;
+        break;
+    }
 }
-if (allvalido){
-    alert ("Ingrese unicamente numeros  ")
+if (!allvalido) {
+    alert("Ingrese únicamente números");
     formulario.edad.focus();
     return false;
+}
+//Validación correo electrónico
+var correo = formulario.correo.value;
+var regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if (!regexCorreo.test(correo)) {
+   alert("Ingrese un correo electrónico válido");
+   formulario.correo.focus();
+   return false;
+//}
+
+} 
+
+
+//Validar correo electrónico que acepte formato texto@texto.texto
+//texto.texto@texto.texto 
+//texto.texto@texto.texto 
 
 }
 
-
-var b = /^[^@\s] + @[^@\.\s] + (\.[^@\.\s]+)+$/;
-var txt = formulario.correo.value 
-
-    alert ("Email" + (b.test(txt)? "": " no " )+ "valido");
-    return b.test;
-
-}
-
-
-//Validar correo electronico q acepte todo alachingada 
-//texto.texto@texto.texto }
