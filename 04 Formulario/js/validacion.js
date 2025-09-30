@@ -69,10 +69,8 @@ if (allvalido){
 var b = /^[^@\s] + @[^@\.\s] + (\.[^@\.\s]+)+$/;
 var txt = formulario.correo.value 
 
-    alert ("Email" + (b.test(txt) ? " ": " no " )+ "valido");
+    alert ("Email" + (b.test(txt)? "": " no " )+ "valido");
     return b.test;
-
-
 
 }
 
