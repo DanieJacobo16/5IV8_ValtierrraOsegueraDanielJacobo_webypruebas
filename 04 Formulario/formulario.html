@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de formulario</title>
+    <script src="./js/validacion.js"></script>
+</head>
+<body>
+ <div class=" Textote ">
+<p>Todos los formularios en la web, manejan metodos para el envio de las diferentes peticiones que realiza el usuario condirendado 
+    la arquitrectura cliente servidor se hacen por el metodo  http y acualmente https, cada peticion debe ser atendida por un tiempo de respuesta conforme al 
+    modelo TCP/LP Los metodos principales de los formularoios son : </p>
+    <li><ol>GEt<h1>Este metodo se encarga de enviar informacion del formulario por medio de la salida estandar del navgegador, esto propicia 
+        que pueda existir inyecciones de codigo realizando violaciones a la seguridad al sistema </h1></ol></li>  
+        <ol>POST <h1>Este metodo se encarga de enviar la informacion para para poder registrar un cambio o un nuevo registro dentro del sistema enviandolo igual por el metodo
+            estandar, por medio del ocultamientom esto significa que no es visible, para el usuario lo que nos ofrece mayor grado de seguridad en el manjo de la informacion
+        </h1></ol>  
+        <br>
+        <p>En resumen los puntos son: 
+            <li>
+                <ul>Get: Sirve para enviar o realizar operaciones de consulta</ul>
+                <ul>Post: Sirve para enviar un recurso al servidor con el fin de registrarlo </ul>
+                <ul>Delete: Sirve para eliminar un recurso especifico dentro del servidor obteniendo una respuesta de actualizacion</ul>
+                <u>Put: Sirve para almacenar el recurso de una informacion particular y conectarse al servicio para una atualizacion</ul>
+                <ul>Head: SIrve para regresar el codigo de cualquier cabecera HTTP ASICUADA A UN RECURSo</ul>
+            </li>
+        </p>
+    </div>
+        <div class=" container-form">
+            <form method="post" id="formulario " onsubmit="return validar (this)" name="formulario" action="">
+                <label for="">Nombre: </label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ingresa aqui tu nombre">
+                <br>
+                <label for="">Edad: </label>
+                <input type="text" id="edad" name="edad" placeholder="Ingresa aqui tu edad">
+                <br>
+                <label for="">Correo: </label>
+                <input type="email" id="correo" name="correo" placeholder="Ingresa aqui tu correo">
+                <br>
+                <input type="submit" name="enviar" value="Enviar registro">
+                <br>
+                <input type="reset" name="reset" value="Reiniciar Registro ">
+
+        </div>
+</body>
+</html>
