@@ -14,12 +14,10 @@ function validar (formulario) {
         formulario.nombre.focus ();
         return false ;
     }
-//VAlidacion letras 
+//Validacion letras 
 var checkStr = formulario.nombre.value;
-alert (checkStr);
-var abcOK = "abcdefghijklmnñopqrstuvwxyz" + "ABCDEFGHIJKLMNÑOPQRSTUVWYZ" + "áéíóú" + " ";
-
-var allvalido = true ;
+var abcOK = "ABCDEFGHIJKLMNÑOPQRSTUVWYZ" + "abcdefghijklmnñopqrstuvwxyz";
+var allvalido = false ;
 
 //Tenemos q comparar cadena de nombre con el resultado de abc 
 for( var i=0; checkStr.lenght; i++){
@@ -40,4 +38,44 @@ if (allvalido){
     return false;
 
 }
+
+//VAlidacion letras 
+var checkStr = formulario.edad.value;
+var abcOK = "1234567890";
+
+var allvalido = false ;
+
+//Tenemos q comparar cadena de nombre con el resultado de abc 
+for( var i=0; checkStr.lenght; i++){
+    var caracteres=checkStr.charArt(i);
+    for(var j=0; j< abcOK.length; j++){
+        if (caracteres==abcOK.charAt(j))
+            break;
+        }
+if(j==abcOK.length) {
+    allvalido=false;
+    break;
 }
+
+}
+if (allvalido){
+    alert ("Ingrese unicamente numeros  ")
+    formulario.edad.focus();
+    return false;
+
+}
+
+
+var b = /^[^@\s] + @[^@\.\s] + (\.[^@\.\s]+)+$/;
+var txt = formulario.correo.value 
+
+    alert ("Email" + (b.test(txt) ? " ": " no " )+ "valido");
+    return b.test;
+
+
+
+}
+
+
+//Validar correo electronico q acepte todo alachingada 
+//texto.texto@texto.texto }
