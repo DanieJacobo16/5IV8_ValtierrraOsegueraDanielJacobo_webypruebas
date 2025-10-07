@@ -8,15 +8,23 @@ function validarn (e) {
   return patron.test(codigo);
 
 }
+// Delimitar num de decimales
 function interes () {
     var valor = document.getElementById("cantidadi").value; 
 
     var parseo = parseFloat(valor);
     alert(parseo);
-    var interes = parseo*(0.0805)
+    var interes = parseo*(0.0805); //Limite a 2 decimales 
     alert (interes);
     var total = interes+parseo;
     alert(total);
-    document.getElementById("saldoi").value= "$ " + total; 
+    document.getElementById("saldoi").value= "$ " + total; //Limite a 2 decimales 
+
+}
+
+function borrar () {
+   document.getElementById("cantidadi").value= " "
+   document.getElementById("saldoi").value= " "
+
 
 }
