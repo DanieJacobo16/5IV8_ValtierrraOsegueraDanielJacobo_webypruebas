@@ -1,0 +1,111 @@
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    background-color: #F5F7FA; 
+    color: #212121;
+    line-height: 1.6;
+}
+
+
+:root {
+    --primary-color: #4A90E2;   
+    --secondary-color: #4CAF50; 
+    --accent-color: #FFC107;    
+    --text-color: #212121;
+    --surface-color: #FFFFFF;
+    --divider-color: #E0E0E0;
+}
+
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--surface-color);
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: 1px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    border-radius: 0 0 16px 16px;
+}
+
+
+p {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+    font-size: 1rem;
+    color: var(--text-color);
+}
+
+.container-table {
+    margin: 2rem auto;
+    border-collapse: collapse;
+    width: 90%;
+    max-width: 900px;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.container-table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.container-table tr:last-child td {
+    border-bottom: none;
+}
+
+.container-table a {
+    color: var(--primary-color);
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.container-table a:hover {
+    color: var(--secondary-color);
+}
+
+button, .btn {
+    display: inline-block;
+    padding: 0.7rem 1.2rem;
+    margin: 0.5rem 0;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: 500;
+    color: #fff;
+    background-color: var(--accent-color);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, .btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+    .container-table td {
+        display: block;
+        width: 100%;
+    }
+
+    .container-table tr {
+        margin-bottom: 1rem;
+        display: block;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    }
+}
+

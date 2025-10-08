@@ -1,0 +1,141 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: #F2F6FA;
+    margin: 0;
+    color: #2C3E50;
+}
+
+
+:root {
+    --primary-color: #3B82F6;  
+    --secondary-color: #22C55E; 
+    --accent-color: #FACC15;    
+    --surface-color: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #E5E7EB;
+}
+
+.container {
+    max-width: 800px;
+    margin: 3rem auto;
+    background-color: var(--surface-color);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: 0 8px 20px var(--shadow-color);
+}
+
+label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: 700;
+    text-align: center;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.container-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--surface-color);
+}
+
+.table td {
+    padding: 1rem;
+    vertical-align: middle;
+    border-bottom: 1px solid var(--border-color);
+    font-size: 1rem;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 0.6rem 0.8rem;
+    border: 1.8px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 6px rgba(59, 130, 246, 0.3);
+    outline: none;
+}
+
+input[type="button"] {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #fff;
+    font-weight: 600;
+    padding: 0.7rem 1.4rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+input[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(59, 130, 246, 0.3);
+}
+
+input[value="Borrar Datos"] {
+    background: var(--accent-color);
+    color: #333;
+}
+
+input[value="Borrar Datos"]:hover {
+    background: #EAB308;
+    transform: translateY(-2px);
+}
+
+.input_text {
+    background-color: #F9FAFB;
+    font-weight: 600;
+    color: #111827;
+}
+
+.container-footer {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    /* Elimina left: 700px */
+}
+
+h2 a:hover {
+    color: var(--accent-color);
+}
+
+/* ======== Responsive ======== */
+@media (max-width: 600px) {
+    .container {
+        margin: 1.5rem;
+        padding: 1.5rem;
+    }
+
+    label {
+        font-size: 1rem;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+        border: none;
+        padding: 0.7rem 0;
+    }
+
+    input[type="button"] {
+        width: 100%;
+        margin-top: 0.5rem;
+    }
+}
