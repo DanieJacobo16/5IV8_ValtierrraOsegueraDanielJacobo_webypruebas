@@ -1,0 +1,126 @@
+body {
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    background-color: #E8F1F8;
+    color: #1F2937;
+  }
+  
+  :root {
+    --primary-color: #2563EB;  
+    --secondary-color: #10B981;
+    --accent-color: #FCD34D;    
+    --surface-color: #FFFFFF;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --border-color: #D1D5DB;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 3rem auto;
+    background-color: var(--surface-color);
+    border-radius: 14px;
+    padding: 2rem;
+    box-shadow: 0 6px 15px var(--shadow-color);
+  }
+  
+  label {
+    display: block;
+    text-align: center;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+  }
+  
+  .container-table {
+    width: 100%;
+  }
+  
+  .table td {
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    padding: 0.6rem;
+    border: 1.5px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(37,99,235,0.3);
+    outline: none;
+  }
+  
+  input[type="button"] {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.7rem 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  input[type="button"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(37,99,235,0.4);
+  }
+  
+  input[value="Borrar Datos"] {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: #ffffff;
+  }
+  
+  .input_text {
+    background-color: #F9FAFB;
+    font-weight: 600;
+    color: #111827;
+  }
+  
+  .container-footer {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  
+  h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+    /* Elimina left: 700px */
+}
+
+h2 a:hover {
+    color: var(--accent-color);
+}
+
+
+  @media (max-width: 600px) {
+    .container {
+      margin: 1rem;
+      padding: 1.5rem;
+    }
+  
+    .table td {
+      display: block;
+      width: 100%;
+    }
+  
+    input[type="button"] {
+      width: 100%;
+      margin-top: 0.6rem;
+    }
+  }
+  
