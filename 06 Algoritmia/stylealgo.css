@@ -1,0 +1,101 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f4f6f9;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.Problema-container {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  width: 90%;
+  max-width: 700px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.problema-title {
+  text-align: center;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+h3 {
+  font-weight: normal;
+  text-align: justify;
+  font-size: 15px;
+  color: #444;
+}
+
+.problema-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.problema-input {
+  width: 80%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.problema-input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.problema-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 15px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.problema-button:hover {
+  background-color: #0056b3;
+}
+
+.problema-output {
+  width: 90%;
+  background-color: #f9f9f9;
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 15px;
+  white-space: pre-wrap;
+}
+
+.problema_table {
+  border-collapse: collapse;
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.problema_table th,
+.problema_table td {
+  border: 1px solid #ccc;
+  padding: 8px;
+}
+
+.problema_table th {
+  background-color: #e9ecef;
+}
