@@ -99,3 +99,23 @@ h3 {
 .problema_table th {
   background-color: #e9ecef;
 }
+
+.container-footer footer {
+    background: #2d3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 32px;
+}
+
+.container-footer h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+.container-footer a {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #ffcc00;
+}
+
