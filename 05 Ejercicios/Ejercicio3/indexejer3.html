@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicio 3 - Descuento del 5%</title>
+ <link rel="stylesheet" href="./styleejer3.css">
+</head>
+<body>
+  <div class="container">
+    <form name="formulario">
+      <label for="">Cálculo de Descuento del 5%</label>
+
+      <div class="container-table">
+        <table class="table">
+          <tr>
+            <td>Nombre del producto:</td>
+            <td><input type="text" id="producto" placeholder="Ej. Camisa azul"></td>
+          </tr>
+          <tr>
+            <td>Precio del producto:</td>
+            <td><input type="text" id="precio" onkeypress="return validarNum(event)"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="button" value="Calcular descuento" onclick="calcular()"></td>
+          </tr>
+          <tr>
+            <td>Monto del descuento (5%):</td>
+            <td><input type="text" id="descuento" readonly class="input_text"></td>
+          </tr>
+          <tr>
+            <td>Total a pagar:</td>
+            <td><input type="text" id="total" readonly class="input_text"></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td><input type="button" value="Borrar Datos" onclick="borrar()"></td>
+          </tr>
+        </table>
+      </div>
+    </form>
+  </div>
+
+      <h2><a href="../indexejercicios.html">Regresar al portafolio</a></h2>
+   
+
+  <script src="./funcionejer3.js"></script>
+</body>
+</html>
