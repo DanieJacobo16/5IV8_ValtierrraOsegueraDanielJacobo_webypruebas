@@ -1,0 +1,115 @@
+:root {
+    --primary-color: #4A90E2;   
+    --secondary-color: #4CAF50; 
+    --accent-color: #FFC107;    
+    --background-color: #F5F7FA;
+    --text-color: #212121;
+    --surface-color: #FFFFFF;
+    --divider-color: #E0E0E0;
+    --shadow: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--surface-color);
+    padding: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+    text-align: center;
+    box-shadow: 0 4px 10px var(--shadow);
+    border-radius: 0 0 16px 16px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background-color: var(--surface-color);
+    border-radius: 12px;
+    box-shadow: 0 4px 10px var(--shadow);
+    padding: 2rem;
+}
+
+label {
+    font-weight: 600;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.container-table {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.table td {
+    padding: 0.8rem;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+input[type="text"] {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid var(--divider-color);
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+input[type="button"] {
+    padding: 0.6rem 1.2rem;
+    background-color: var(--accent-color);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-weight: 500;
+}
+
+input[type="button"]:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+
+  h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+h2 a:hover {
+    color: var(--accent-color);
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 1.4rem;
+    }
+
+    .container {
+        padding: 1rem;
+    }
+
+    .table td {
+        display: block;
+        width: 100%;
+    }
+}

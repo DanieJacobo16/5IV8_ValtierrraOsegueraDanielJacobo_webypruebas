@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porcentaje de Hombres y Mujeres</title>
+    <link rel="stylesheet" href="./styleejer5.css">
+</head>
+<body>
+    <header> Cálculo de Porcentaje de Hombres y Mujeres </header>
+
+    <div class="container">
+        <form name="formulario">
+            <label>Ingrese la cantidad de hombres y mujeres:</label>
+
+            <div class="container-table">
+                <table class="table">
+                    <tr>
+                        <td>Hombres:</td>
+                        <td><input type="text" id="hombres" onkeypress="return soloNumeros(event)"></td>
+                    </tr>
+                    <tr>
+                        <td>Mujeres:</td>
+                        <td><input type="text" id="mujeres" onkeypress="return soloNumeros(event)"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Calcular Porcentaje" onclick="calcular()"></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de Hombres:</td>
+                        <td><input type="text" id="porH" readonly></td>
+                    </tr>
+                    <tr>
+                        <td>Porcentaje de Mujeres:</td>
+                        <td><input type="text" id="porM" readonly></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" value="Borrar Datos" onclick="borrar()"></td>
+                    </tr>
+                </table>
+            </div>
+        </form>
+    </div>
+
+    
+        <h2><a href="../indexejercicios.html">Regresar al Portafolio</a></h2>
+    
+
+    <script src="./js/funcionesejer5.js"></script>
+</body>
+</html>
