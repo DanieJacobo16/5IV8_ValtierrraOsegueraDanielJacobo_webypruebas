@@ -1,0 +1,110 @@
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #90CAF9, #A5D6A7);
+  color: #2E3A59;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.container {
+  background: #FFFFFF;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  max-width: 400px;
+  width: 90%;
+}
+
+h1 {
+  text-align: center;
+  color: #1E88E5;
+  margin-bottom: 1rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+label {
+  font-weight: 600;
+  color: #2E7D32;
+}
+
+input {
+  padding: 0.4rem;
+  border: 2px solid #BDBDBD;
+  border-radius: 8px;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+
+input:focus {
+  border-color: #1E88E5;
+  outline: none;
+  box-shadow: 0 0 5px rgba(30,136,229,0.5);
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+
+button {
+  background-color: #1E88E5;
+  border: none;
+  color: white;
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background-color: #1565C0;
+}
+
+button.borrar {
+  background-color: #E53935;
+}
+
+button.borrar:hover {
+  background-color: #B71C1C;
+}
+
+pre {
+  margin-top: 1.5rem;
+  background-color: #E3F2FD;
+  padding: 1rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  text-align: center;
+  color: #0D47A1;
+}
+
+  
+  h2 {
+    display: flex;
+    justify-content: center;
+}
+
+h2 a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+h2 a:hover {
+    color: var(--accent-color);
+}
+

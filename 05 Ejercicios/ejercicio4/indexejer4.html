@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calificación Final - Algoritmos</title>
+  <link rel="stylesheet" href="./styleejer4.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calificación Final - Algoritmos</h1>
+    <p>
+      Un alumno desea saber cuál será su calificación final en la materia de Algoritmos.  
+      La calificación se compone de los siguientes porcentajes:
+    </p>
+    <ul>
+      <li>55% del promedio de sus tres calificaciones parciales</li>
+      <li>30% de la calificación del examen final</li>
+      <li>15% de la calificación de un trabajo final</li>
+    </ul>
+
+    <div class="inputs">
+      <label>Parcial 1:</label>
+      <input type="text" id="p1" onkeypress="return soloNumerosDecimales(event, this)"  placeholder=" Ingrese calificacion de 0.0 - 10.00">
+      <label>Parcial 2:</label>
+      <input type="text" id="p2" onkeypress="return soloNumerosDecimales(event, this)"   placeholder=" Ingrese calificacion de 0.0 -10.00">
+      <label>Parcial 3:</label>
+      <input type="text" id="p3" onkeypress="return soloNumerosDecimales(event, this)"  placeholder=" Ingrese calificacion de 0.0 - 10.00"> 
+      <label>Examen Final:</label>
+      <input type="text" id="examen" onkeypress="return soloNumerosDecimales(event, this)"  placeholder=" Ingrese calificacion de 0.0 - 10.00">  
+      <label>Trabajo Final:</label>
+      <input type="text" id="trabajo" onkeypress="return soloNumerosDecimales(event, this)"   placeholder=" Ingrese calificacion de 0.0 - 10.00"> 
+    </div>
+
+    <div class="buttons">
+      <button onclick="calcularCalificacion()">Calcular</button>
+      <button class="borrar" onclick="borrar()">Borrar</button>
+    </div>
+
+    <pre id="resultado">Esperando datos...</pre>
+    <h2><a href="../indexejercicios.html"> Regresar al portafolio  </a></h2>
+  </div>
+
+ 
+  <script src="./js/funcionejer4.js"></script>
+</body>
+</html>
