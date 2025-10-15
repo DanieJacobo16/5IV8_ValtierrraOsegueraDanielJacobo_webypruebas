@@ -120,5 +120,5 @@ h2 a {
 }
 
 h2 a:hover {
-    color: var(--accent-color);
+    color: var(yellow);
 }
