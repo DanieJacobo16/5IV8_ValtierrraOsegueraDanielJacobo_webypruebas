@@ -154,3 +154,45 @@ const problema2 = () => {
     document.getElementById("res2").innerText = `El número mayor es: ${mayor}`;
 };
 
+
+//  Problema 3
+const problema3 = () => {
+    const horas = parseInt(document.getElementById("horas").value);
+    const pago = parseFloat(document.getElementById("pago").value);
+
+    if (isNaN(horas) || isNaN(pago)) {
+        document.getElementById("res3").innerText = "Ingresa valores válidos.";
+        return;
+    }
+
+    let total = 0;
+    if (horas <= 40) total = horas * pago;
+    else {
+        const extras = horas - 40;
+        if (extras <= 8) total = (40 * pago) + (extras * pago * 2);
+        else total = (40 * pago) + (8 * pago * 2) + ((extras - 8) * pago * 3);
+    }
+
+    document.getElementById("res3").innerText = `Pago total: $${total.toFixed(2)}`;
+};
+
+//  Problema 4
+const problema4 = () => {
+    const salario = parseFloat(document.getElementById("salario").value);
+    const años = parseInt(document.getElementById("antiguedad").value);
+
+    if (isNaN(salario) || isNaN(años)) {
+        document.getElementById("res4").innerText = "Completa todos los campos.";
+        return;
+    }
+
+    const porcentaje = años < 1 ? 0.05 :
+        años < 2 ? 0.07 :
+        años < 5 ? 0.10 :
+        años < 10 ? 0.15 : 0.20;
+
+    const utilidad = salario * porcentaje;
+
+    document.getElementById("res4").innerText = 
+        `Utilidad: $${utilidad.toFixed(2)} (${(porcentaje * 100)}%)`;
+};
