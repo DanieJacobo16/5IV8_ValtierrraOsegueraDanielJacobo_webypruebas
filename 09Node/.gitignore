@@ -1,0 +1,13 @@
+# Dependencias de Node
+node_modules/
+
+# Variables de entorno
+*.env
+.env.*
+
+# Archivos de logs
+logs/
+
+# Archivos de configuración de editor
+.vscode/
+.idea/
