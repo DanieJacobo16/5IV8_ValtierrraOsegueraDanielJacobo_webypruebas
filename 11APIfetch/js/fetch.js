@@ -1,0 +1,4 @@
+/*
+Este es un ejemplo de un API REST utilizando fetch para obtener datos de una Pokedex.
+el cual sirve para obtener informacion de los pokemones y mostrarlos en una pagina web.
+*/
