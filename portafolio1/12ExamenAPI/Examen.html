@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resúmenes de Fútbol - ScoreBat API</title>
+    <link rel="stylesheet" href="./stylesexam.css">
+     <link rel="icon" type="image/x-icon" href="./img/icon.png">
+    <script src="https://kit.fontawesome.com/101326ea39.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <div class="header-top">
+            <a href="../../index.html" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i> Regresar al portafolio
+            </a>
+        </div>
+        <h1>Resúmenes de Fútbol</h1>
+        <p>Videos y resultados de partidos recientes</p>
+    </header>
+
+    <section class="controls">
+        <div class="d-flex center-flex">
+            <input type="text" id="searchInput" class="lcd-input" placeholder="Buscar equipo o liga..." />
+            <button id="btnSearch" class="btn"> <i class="fa-solid fa-magnifying-glass"></i> </button>
+            <div class="columns-elements">
+                <button class="btn" id="btnPrev"> <i class="fa-solid fa-caret-left"></i> </button>
+                <button class="btn" id="btnNext"> <i class="fa-solid fa-caret-right"></i> </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-container">
+        <div id="loadingContainer" class="loading-container">
+            <img src="./img/loading.gif" alt="Cargando...">
+            <p>Cargando resúmenes...</p>
+        </div>
+
+        <div id="matchesContainer" class="matches-container">
+         
+        </div>
+
+        <div id="matchDetail" class="match-detail hidden">
+            <div class="match-header">
+                <h2 id="matchTitle"></h2>
+                <button id="btnCloseDetail" class="btn-close"><i class="fa-solid fa-times"></i></button>
+            </div>
+            
+            <div class="match-video-container">
+                <div id="matchVideo"></div>
+            </div>
+            
+            <div class="match-info">
+                <div class="match-competition">
+                    <span id="competitionName"></span>
+                    <span id="matchDate"></span>
+                </div>
+                
+                <div class="match-teams">
+                    <div class="team">
+                        <span id="homeTeam"></span>
+                    </div>
+                    <div class="vs">VS</div>
+                    <div class="team">
+                        <span id="awayTeam"></span>
+                    </div>
+                </div>
+                
+                <div class="match-score">
+                    <span id="homeScore"></span> - <span id="awayScore"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <a href="../../index.html" class="btn-back">
+            <i class="fa-solid fa-arrow-left"></i> Regresar al portafolio
+        </a>
+    </footer>
+
+    <script src="./js/fetch.js"></script>
+</body>
+</html>

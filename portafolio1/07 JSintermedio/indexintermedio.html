@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicios con Funciones Flecha</title>
+    <link rel="stylesheet" href="styleJS.css">
+</head>
+<body>
+    <h1>Ejercicios con Funciones Flecha</h1>
+
+    <!-- Problema 1 -->
+    <section class="card">
+        <h2>Problema 1</h2>
+        <p>Leer 2 números. Si son iguales, multiplícalos.  
+        Si el primero es mayor, réstalos. Si no, súmalos.</p>
+
+        <input type="text" id="num1" placeholder="Número 1" onkeypress="return soloNumeros(event)">
+        <input type="text" id="num2" placeholder="Número 2" onkeypress="return soloNumeros(event)">
+        <button onclick="problema1()">Calcular</button>
+        <p id="res1" class="resultado"></p>
+    </section>
+
+    <!-- Problema 2 -->
+    <section class="card">
+        <h2>Problema 2</h2>
+        <p>Leer tres números diferentes e imprimir el mayor.</p>
+
+        <input type="text" id="n1" placeholder="Número 1" onkeypress="return soloNumeros(event)">
+        <input type="text" id="n2" placeholder="Número 2" onkeypress="return soloNumeros(event)">
+        <input type="text" id="n3" placeholder="Número 3" onkeypress="return soloNumeros(event)">
+        <button onclick="problema2()">Calcular</button>
+        <p id="res2" class="resultado"></p>
+    </section>
+
+    <!-- Problema 3 -->
+    <section class="card">
+        <h2>Problema 3</h2>
+        <p>Calcular el pago por horas extra:  
+        Las horas extra (más de 40) se pagan al doble hasta 8 horas,  
+        y al triple si son más de 8.</p>
+
+        <input type="text" id="horas" placeholder="Horas trabajadas" onkeypress="return soloNumeros(event)">
+        <input type="text" id="pago" placeholder="Pago por hora" onkeypress="return soloNumeros(event)">
+        <button onclick="problema3()">Calcular</button>
+        <p id="res3" class="resultado"></p>
+    </section>
+
+    <!-- Problema 4 -->
+    <section class="card">
+        <h2>Problema 4</h2>
+        <p>Calcular utilidad anual según años trabajados.</p>
+
+        <input type="text" id="salario" placeholder="Salario mensual" onkeypress="return soloNumeros(event)">
+        <input type="text" id="antiguedad" placeholder="Años trabajados" onkeypress="return soloNumeros(event)">
+        <button onclick="problema4()">Calcular</button>
+        <p id="res4" class="resultado"></p>
+    </section>
+
+      <h2><a href="../../index.html"  > Regresar al portafolio</a></h2> 
+    <script src="./js/JSintermedio.js">
+
+    </script>
+</body>
+</html>
