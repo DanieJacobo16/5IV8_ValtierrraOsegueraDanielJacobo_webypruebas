@@ -37,7 +37,9 @@ function suma(a, b) {
 const memoizedSuma = memoize(suma);
 
 // Prueba :P
-console.log(memoizedSuma(2, 4)); 
-console.log(memoizedSuma(2, 4)); 
+console.log(memoizedSuma(2, 7)); 
+console.log(memoizedSuma(2, 5)); 
 console.log(memoizedSuma(5, 5)); 
-console.log("callCount:", callCount); // 1
+console.log("Dato guardado en cache:", callCount); // 1
+
+
