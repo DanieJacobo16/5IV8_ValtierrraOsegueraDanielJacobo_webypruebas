@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Actividad</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>✏️ Editar Actividad</h1>
+            <a href="/" class="btn-volver">← Volver al listado</a>
+        </header>
+
+        <section class="form-section">
+            <form action="/actividades/update/<%= actividad.id %>" method="POST" class="actividad-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="fecha">Fecha:</label>
+                        <input type="date" id="fecha" name="fecha" value="<%= actividad.fecha %>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="hora">Hora:</label>
+                        <input type="time" id="hora" name="hora" value="<%= actividad.hora %>" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="prioridad">Prioridad:</label>
+                        <select id="prioridad" name="prioridad" required>
+                            <option value="Alta" <%= actividad.prioridad === 'Alta' ? 'selected' : '' %>>Alta</option>
+                            <option value="Media" <%= actividad.prioridad === 'Media' ? 'selected' : '' %>>Media</option>
+                            <option value="Baja" <%= actividad.prioridad === 'Baja' ? 'selected' : '' %>>Baja</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="actividad">Actividad:</label>
+                    <input type="text" id="actividad" name="actividad" value="<%= actividad.actividad %>" required minlength="3">
+                </div>
+
+                <div class="form-group">
+                    <label for="descripcion">Descripción:</label>
+                    <textarea id="descripcion" name="descripcion" required><%= actividad.descripcion %></textarea>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="estado">Estado:</label>
+                        <select id="estado" name="estado" required>
+                            <option value="Pendiente" <%= actividad.estado === 'Pendiente' ? 'selected' : '' %>>Pendiente</option>
+                            <option value="En Progreso" <%= actividad.estado === 'En Progreso' ? 'selected' : '' %>>En Progreso</option>
+                            <option value="Completada" <%= actividad.estado === 'Completada' ? 'selected' : '' %>>Completada</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="horas_invertidas">Horas Invertidas:</label>
+                        <input type="number" id="horas_invertidas" name="horas_invertidas" 
+                               value="<%= actividad.horas_invertidas %>" step="0.5" min="0" max="24" required>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">💾 Actualizar Actividad</button>
+                    <a href="/" class="btn-cancelar">❌ Cancelar</a>
+                </div>
+            </form>
+        </section>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        form.addEventListener('submit', function(e) {
+            const horas = document.getElementById('horas_invertidas');
+            if (horas.value < 0 || horas.value > 24) {
+                e.preventDefault();
+                alert('Las horas invertidas deben estar entre 0 y 24');
+                horas.focus();
+            }
+        });
+    </script>
+</body>
+</html>
