@@ -1,0 +1,149 @@
+/* Main stylesheet for Registro de Estudiantes */
+:root {
+	--bg: #f4f7fb;
+	--card: #ffffff;
+	--accent: #4a90e2;
+	--accent-2: #2d6cdf;
+	--muted: #6b7280;
+	--success: #16a34a;
+	--danger: #ef4444;
+	--radius: 10px;
+	--max-width: 760px;
+	--font-sans: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+* { box-sizing: border-box; }
+html,body { height:100%; }
+body {
+	margin: 0;
+	font-family: var(--font-sans);
+	background: linear-gradient(180deg, var(--bg), #eef4fb 60%);
+	color: #0f172a;
+	-webkit-font-smoothing:antialiased;
+	-moz-osx-font-smoothing:grayscale;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 40px 16px;
+}
+
+/* Page wrapper to center content */
+main, .wrapper {
+	width: 100%;
+	max-width: var(--max-width);
+}
+
+h1 {
+	text-align: center;
+	margin: 0 0 20px;
+	font-size: 1.8rem;
+	color: #0b2545;
+	letter-spacing: -0.2px;
+}
+
+form {
+	background: var(--card);
+	padding: 18px;
+	border-radius: var(--radius);
+	box-shadow: 0 6px 20px rgba(18,38,63,0.08);
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 12px;
+	align-items: end;
+	margin-bottom: 18px;
+}
+
+label {
+	font-size: 0.85rem;
+	color: var(--muted);
+	display: block;
+	margin-bottom: 6px;
+}
+
+input[type="text"],
+input[type="number"]{
+	width: 100%;
+	padding: 10px 12px;
+	border: 1px solid #e6eef9;
+	border-radius: 8px;
+	background: #fafcff;
+	outline: none;
+	transition: box-shadow .15s ease, border-color .15s ease;
+	font-size: 0.95rem;
+	color: #0b2038;
+}
+input:focus{
+	border-color: var(--accent);
+	box-shadow: 0 6px 18px rgba(74,144,226,0.12);
+}
+
+button[type="submit"]{
+	grid-column: 3 / 4;
+	padding: 10px 14px;
+	background: linear-gradient(180deg,var(--accent),var(--accent-2));
+	color: #fff;
+	border: none;
+	border-radius: 8px;
+	cursor: pointer;
+	font-weight: 600;
+	transition: transform .08s ease, box-shadow .12s ease;
+}
+button[type="submit"]:hover{ transform: translateY(-2px); }
+button[type="submit"]:active{ transform: translateY(0); }
+
+/* Student list */
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: grid;
+	gap: 10px;
+}
+
+li {
+	background: var(--card);
+	padding: 12px 14px;
+	border-radius: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	box-shadow: 0 4px 14px rgba(12,34,60,0.06);
+}
+
+li strong { display:block; font-size: 1rem; color:#07203a; }
+li small { color: var(--muted); font-size: 0.9rem; margin-left:8px; }
+
+li a {
+	margin-left: 8px;
+	text-decoration: none;
+	padding: 6px 10px;
+	border-radius: 6px;
+	font-size: 0.85rem;
+	color: #ffffff;
+}
+li a[href*="/edit/"] { background: #10b981; } /* green edit */
+li a[href*="/delete/"] { background: var(--danger); } /* red delete */
+li a:hover { opacity: 0.95; transform: translateY(-1px); box-shadow: 0 6px 14px rgba(0,0,0,0.06); }
+
+/* Responsive adjustments */
+@media (max-width: 760px) {
+	form { grid-template-columns: 1fr; }
+	button[type="submit"]{ grid-column: auto; width: 100%; }
+	li { flex-direction: column; align-items: flex-start; gap: 8px; }
+	li a { margin-left: 0; }
+	h1 { font-size: 1.4rem; }
+}
+
+/* Accessibility helpers */
+.sr-only {
+	position: absolute !important;
+	width: 1px; height: 1px;
+	padding: 0; margin: -1px;
+	overflow: hidden; clip: rect(0,0,0,0);
+	white-space: nowrap; border: 0;
+}
+
+/* Small helper spacing for page layout */
+.spacer { height: 12px; }
+
+/* End of stylesheet */
